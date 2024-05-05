@@ -45,7 +45,7 @@ function AddFood(){
             <label>Carbohydrates: </label>
             <input name= "carbs" type = "text" value={food.carbs} onChange={handleChange}></input>
             <br /><br />
-            <button name="submit" type="submit">Submit</button>
+            <button name="submit" type="submit" onClick={handleSubmit}>Submit</button>
         </form>
       </div>
     )

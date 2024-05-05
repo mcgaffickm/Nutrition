@@ -4,7 +4,7 @@ function AllFoods() {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch('<http://localhost:8080/FoodData>')
+    fetch('http://localhost:8080/food')
       .then(response => response.json())
       .then(data => setFoods(data))
       .catch(error => console.error('Error fetching food data:', error));

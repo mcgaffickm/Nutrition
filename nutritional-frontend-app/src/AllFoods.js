@@ -4,7 +4,7 @@ function AllFoods() {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/foods', {mode:"no-cors"})
+    fetch('http://localhost:8080/foods')
       .then(response => response.json())
       .then(data => setFoods(data))
       .catch(error => console.error('Error fetching food data:', error));

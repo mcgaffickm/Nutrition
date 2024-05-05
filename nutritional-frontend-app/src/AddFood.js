@@ -26,6 +26,9 @@ function AddFood(){
             <label>Carbohydrates: </label>
             <input name= "carbs" type = "text" ></input>
             <br /><br />
+            <label>Fiber: </label>
+            <input name= "fiber" type = "text" ></input>
+            <br /><br />
             <button name="submit" type="submit" >Submit</button>
         </form>
       </div>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import './AllFoods.css'
+
 function AllFoods() {
   const [foods, setFoods] = useState([]);
 
@@ -13,11 +15,34 @@ function AllFoods() {
   return (
     <div>
       <h2>Food Data:</h2>
-      <ul>
+      <table>
+        <th>ID</th>
+        <th>Food Name</th>
+        <th>Calories</th>
+        <th>Fat</th>
+        <th>Protein</th>
+        <th>Carbohydrates</th>
+        <th>Fiber</th>
         {foods.map(food => (
-          <li key={food.id}>{food.name}</li>
+          <tr key={food.id}>
+            <td>{food.id}</td>
+            <td>{food.name}</td>
+            <td>{food.calories}</td>
+            <td>{food.fat}</td>
+            <td>{food.protein}</td>
+            <td>{food.carbs}</td>
+            <td>{food.fiber}</td>
+          </tr>
         ))}
-      </ul>
+      </table>
+      <hr></hr>
+      <div align='center'>
+        <form>
+          <h2 align='center'>Remove a Food</h2>
+          <label>ID</label><br></br> <input type='text'></input>
+          <button value=''>Submit</button>
+        </form>
+      </div>
     </div>
   );
 }

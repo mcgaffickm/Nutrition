@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
+import './AddFood.css'
 
 function AddFood(){
 
@@ -19,7 +20,7 @@ function AddFood(){
       .then(response => response.json())
       .then(data => console.log('Food Created:', data))
       .catch(error => console.error('Error creating user:', error));
-    };
+    }; 
 
     //Handles change event
     const handleChange = function(event){
@@ -31,28 +32,31 @@ function AddFood(){
     //Creates the input form for the food entries
     return(
       <div>
-        <h1 align="center">Add a food</h1>
-        <form align="center" onSubmit={handleSubmit}>
-            <label>Name of Food: </label>
-            <input name= "name" type = "text" value={food.name} onChange={handleChange}></input>
-            <br /><br />
-            <label>Calories: </label>
-            <input name= "calories" type = "text" value={food.calories} onChange={handleChange} ></input>
-            <br /><br />
-            <label>Fat:</label>
-            <input name= "fat" type = "text" value={food.fat} onChange={handleChange} ></input>
-            <br /><br />
-            <label>Protein: </label>
-            <input name= "protein" type = "text" value={food.protein} onChange={handleChange} ></input>
-            <br /><br />
-            <label>Carbohydrates: </label>
-            <input name= "carbs" type = "text" value={food.carbs} onChange={handleChange}></input>
-            <br /><br />
-            <label>Fiber: </label>
-            <input name= "fiber" type = "text" value={food.fiber} onChange={handleChange}></input>
-            <br /><br />
-            <button name="submit" type="submit" >Submit</button>
-        </form>
+        
+        <div align="center">
+          <form align="center" onSubmit={handleSubmit}>
+          <h1 align="center">Add a food</h1>
+              <label>Name of Food: </label><br></br>
+              <input name= "name" type = "text" value={food.name} onChange={handleChange}></input>
+              <br /><br />
+              <label>Calories:</label><br></br>
+              <input class='inputnums'  name= "calories" type = "number" value={food.calories} onChange={handleChange} ></input>
+              <br /><br />
+              <label>Fat:</label><br></br>
+              <input class='inputnums' name= "fat" type = "number" value={food.fat} onChange={handleChange} ></input>
+              <br /><br />
+              <label>Protein:</label><br></br>
+              <input class='inputnums' name= "protein" type = "number" value={food.protein} onChange={handleChange} ></input>
+              <br /><br />
+              <label>Carbohydrates: </label><br></br>
+              <input class='inputnums'  name= "carbs" type = "number" value={food.carbs} onChange={handleChange}></input>
+              <br /><br />
+              <label>Fiber: </label><br></br>
+              <input class='inputnums' name= "fiber" type = "number" value={food.fiber} onChange={handleChange}></input>
+              <br /><br />
+              <button name="submit" type="submit" >Submit</button>
+          </form>
+        </div>
       </div>
     )
   }

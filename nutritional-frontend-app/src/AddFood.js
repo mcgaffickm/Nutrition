@@ -20,7 +20,7 @@ function AddFood(){
       .then(response => response.json())
       .then(data => console.log('Food Created:', data))
       .catch(error => console.error('Error creating user:', error));
-    };
+    }; 
 
     //Handles change event
     const handleChange = function(event){

@@ -1,1 +1,2 @@
-This is a personal project to learn spring boot and react.
+./mvnw spring-boot:run in backend app
+npm start in frontend app

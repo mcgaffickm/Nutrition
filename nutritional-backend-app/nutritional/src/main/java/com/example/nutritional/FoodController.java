@@ -52,7 +52,6 @@ public class FoodController {
         
         //Updates the values of the food
         currentFood.setName(food.getName());
-        currentFood.setDate(food.getDate());
         currentFood.setCalories(food.getCalories());
         currentFood.setFat(food.getFat());
         currentFood.setProtein(food.getProtein());

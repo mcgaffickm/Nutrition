@@ -9,7 +9,7 @@ public class Food {
     //Declaration of variables that match react
     private @Id @GeneratedValue Long id;
     private String name;
-    private String date;
+
     private int calories;
     private int fat;
     private int protein;
@@ -19,10 +19,9 @@ public class Food {
     private Food() {};
 
     //Constructor
-    public Food(String name, String date, int calories, int fat, int protein, int carbs, int fiber)
+    public Food(String name,int calories, int fat, int protein, int carbs, int fiber)
     {
         this.name = name;
-        this.date = date;
         this.calories = calories;
         this.fat = fat;
         this.protein = protein;
@@ -40,11 +39,6 @@ public class Food {
     {return name;}
     public void setName(String name)
     {this.name = name;}
-
-    public String getDate()
-    {return date;}
-    public void setDate(String date)
-    {this.date = date;}
 
     public int getCalories()
     {return calories;}
@@ -75,7 +69,7 @@ public class Food {
     //Overrides the to string method
     @Override
     public String toString(){
-        return "Food{" + "id=" + id + ", name=" + name + ", date=" + date + ", calories=" + calories + 
+        return "Food{" + "id=" + id + ", name=" + name + ", calories=" + calories + 
         ", fat=" + fat + ", carbs=" + carbs + ", protein=" + protein + ", fiber=" + fiber + "}";
     }
 }

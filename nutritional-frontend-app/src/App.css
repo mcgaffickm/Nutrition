@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.banner{
+  text-align: center;
+  background-color: #0c6514;
+  color: #61dafb;
+}
+
+.topnav{
+  background-color:#98e8a0;
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+}
+
+.links
+{
+  padding-right: 50px;
+  font-size: 25px;
+}

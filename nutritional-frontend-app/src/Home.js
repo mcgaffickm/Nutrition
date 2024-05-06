@@ -2,9 +2,9 @@ function Home(){
     return(
       <div>
        <h1>
-          Welcome to the Nutrional Analyzer
+          Welcome
         </h1>
-        <p>A personal project to learn react</p>
+        <p>To start, please add food to the database using the navigation bar above and then explore other pages.</p>
       </div>
     )
   }

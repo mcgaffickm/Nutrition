@@ -1,0 +1,21 @@
+form{
+    background-color:darkgray;
+    width:400px;
+    length:700px;
+    justify-content: left;
+    align:left;
+    text-align:left
+}
+
+label{
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+.inputnums{
+    width:100px;
+}
+
+button{
+    width:400px
+}

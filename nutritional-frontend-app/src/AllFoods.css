@@ -1,0 +1,10 @@
+td {
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+table, th{
+    border: 1px solid black;
+    border-radius: 15px;
+}

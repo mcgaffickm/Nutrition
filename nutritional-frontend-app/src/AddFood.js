@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function AddFood(){
 
     //Creates the food value
-    const [food, setFood] = useState({name:"", date:"", calories:"",fat:"",protein:"",carbs:"",fiber:""});
+    const [food, setFood] = useState({name:"",calories:"",fat:"",protein:"",carbs:"",fiber:""});
 
     //Fetch method to make the post
     const handleSubmit = function(event) {
@@ -35,9 +35,6 @@ function AddFood(){
         <form align="center" onSubmit={handleSubmit}>
             <label>Name of Food: </label>
             <input name= "name" type = "text" value={food.name} onChange={handleChange}></input>
-            <br /><br />
-            <label>Date Eaten: </label>
-            <input name= "date" type = "date" value={food.date} onChange={handleChange} ></input>
             <br /><br />
             <label>Calories: </label>
             <input name= "calories" type = "text" value={food.calories} onChange={handleChange} ></input>

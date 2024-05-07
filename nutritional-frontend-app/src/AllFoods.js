@@ -4,7 +4,7 @@ import './AllFoods.css'
 
 function AllFoods() {
   const [foods, setFoods] = useState([]);
-
+  let removeid;
   useEffect(() => {
     fetch('http://localhost:8080/foods')
       .then(response => response.json())
@@ -35,14 +35,6 @@ function AllFoods() {
           </tr>
         ))}
       </table>
-      <hr></hr>
-      <div align='center'>
-        <form>
-          <h2 align='center'>Remove a Food</h2>
-          <label>ID</label><br></br> <input type='text'></input>
-          <button value=''>Submit</button>
-        </form>
-      </div>
     </div>
   );
 }

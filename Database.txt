@@ -1,3 +1,0 @@
-To run the database, 
-cd /hsqldb-2.7.2/hsqldb/data
-java -cp ../lib/hsqldb.jar org.hsqldb.util.DatabaseManagerSwing

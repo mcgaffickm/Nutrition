@@ -4,7 +4,7 @@ import './AllFoods.css'
 
 function AllFoods() {
   const [foods, setFoods] = useState([]);
-
+  let removeid;
   useEffect(() => {
     fetch('http://localhost:8080/foods')
       .then(response => response.json())
@@ -18,6 +18,7 @@ function AllFoods() {
       <table>
         <th>ID</th>
         <th>Food Name</th>
+        <th>Date Eaten</th>
         <th>Calories</th>
         <th>Fat</th>
         <th>Protein</th>
@@ -26,6 +27,7 @@ function AllFoods() {
         {foods.map(food => (
           <tr key={food.id}>
             <td>{food.id}</td>
+            <td>{food.date}</td>
             <td>{food.name}</td>
             <td>{food.calories}</td>
             <td>{food.fat}</td>
@@ -35,14 +37,6 @@ function AllFoods() {
           </tr>
         ))}
       </table>
-      <hr></hr>
-      <div align='center'>
-        <form>
-          <h2 align='center'>Remove a Food</h2>
-          <label>ID</label><br></br> <input type='text'></input>
-          <button value=''>Submit</button>
-        </form>
-      </div>
     </div>
   );
 }

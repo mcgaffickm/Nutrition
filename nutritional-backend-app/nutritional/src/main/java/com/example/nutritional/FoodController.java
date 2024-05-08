@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.ArrayList;
 
 import org.apache.catalina.connector.Response;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +38,27 @@ public class FoodController {
     {
         return foodRepository.findAll();
     }
+
+    //Mapping for the totals
+    @GetMapping("/totals")
+    public List<Food> getTotalFoods() 
+    {
+        List<Food> foods = foodRepository.findAll();
+        ArrayList<Food> totalFood = new ArrayList<Food>();
+        Food totals = new Food("Total Food","n/a",0,0,0,0,0);
+        //Loops through total, eventually will add
+        for(int j = 0; j < foods.size(); j++)
+        {
+            totals.addCalories(foods.get(j).getCalories());
+            totals.addFat(foods.get(j).getFat());
+            totals.addCarbs(foods.get(j).getCarbs());
+            totals.addProtein(foods.get(j).getProtein());
+            totals.addFiber(foods.get(j).getFiber());
+        }
+
+       totalFood.add(totals);
+        return totalFood;
+    }
     
     //Post mapping to create new foods
     @PostMapping
@@ -51,6 +73,7 @@ public class FoodController {
         Food currentFood = foodRepository.findById(id).orElseThrow(RuntimeException::new);
         
         //Updates the values of the food
+        currentFood.setDate(food.getDate());
         currentFood.setName(food.getName());
         currentFood.setCalories(food.getCalories());
         currentFood.setFat(food.getFat());

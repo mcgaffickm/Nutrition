@@ -4,6 +4,8 @@ import './AddFood.css'
 
 function AddFood(){
 
+
+
     //Creates the food value
     const [food, setFood] = useState({name:"",calories:"",fat:"",protein:"",carbs:"",fiber:""});
 
@@ -22,11 +24,12 @@ function AddFood(){
       .catch(error => console.error('Error creating user:', error));
     }; 
 
+
     //Handles change event
     const handleChange = function(event){
       const{name, value} = event.target;
       setFood(prevFood => ({...prevFood, [name]: value}));
-    };
+    }; 
 
 
     //Creates the input form for the food entries
@@ -38,6 +41,9 @@ function AddFood(){
           <h1 align="center">Add a food</h1>
               <label>Name of Food: </label><br></br>
               <input name= "name" type = "text" value={food.name} onChange={handleChange}></input>
+              <br /><br />
+              <label>Date Eaten </label><br></br>
+              <input name= "date" type = "date" value={food.date} onChange={handleChange}></input>
               <br /><br />
               <label>Calories:</label><br></br>
               <input class='inputnums'  name= "calories" type = "number" value={food.calories} onChange={handleChange} ></input>
@@ -54,7 +60,7 @@ function AddFood(){
               <label>Fiber: </label><br></br>
               <input class='inputnums' name= "fiber" type = "number" value={food.fiber} onChange={handleChange}></input>
               <br /><br />
-              <button name="submit" type="submit" >Submit</button>
+              <button name="submit" type="submit">Submit</button>
           </form>
         </div>
       </div>

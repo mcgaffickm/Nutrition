@@ -30,7 +30,7 @@ function App() {
             <Link to ="/RemoveFood">Remove a Food</Link>
           </div>
           <div class="links">
-            <Link to ="/AllFoods">Manage All Foods</Link>
+            <Link to ="/AllFoods">View All Foods</Link>
           </div>
           <div class="links">
             <Link to ="/FoodGraph">Foods Graphs</Link>

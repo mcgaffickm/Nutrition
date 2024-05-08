@@ -18,6 +18,7 @@ function AllFoods() {
       <table>
         <th>ID</th>
         <th>Food Name</th>
+        <th>Date Eaten</th>
         <th>Calories</th>
         <th>Fat</th>
         <th>Protein</th>
@@ -26,6 +27,7 @@ function AllFoods() {
         {foods.map(food => (
           <tr key={food.id}>
             <td>{food.id}</td>
+            <td>{food.date}</td>
             <td>{food.name}</td>
             <td>{food.calories}</td>
             <td>{food.fat}</td>

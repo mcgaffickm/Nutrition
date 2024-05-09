@@ -45,10 +45,24 @@ public class FoodController {
     {
         List<Food> foods = foodRepository.findAll();
         ArrayList<Food> totalFood = new ArrayList<Food>();
-        Food totals = new Food("Total Food","n/a",0,0,0,0,0);
+        Food totals = new Food("Total Food For","",0,0,0,0,0);
+        
+        
         //Loops through total, eventually will add
         for(int j = 0; j < foods.size(); j++)
         {
+            //Sets the initial date or adds a new date if needed
+            if(j == 0)
+            {
+                totals.setDate(foods.get(j).getDate());
+            }
+            else if(totals.getDate() != foods.get(j).getDate())
+            {
+                totalFood.add(totals);
+                totals = new Food("Total Food For",foods.get(j).getDate(),0,0,0,0,0);
+            }
+           
+            //Adds the values for each date of the food
             totals.addCalories(foods.get(j).getCalories());
             totals.addFat(foods.get(j).getFat());
             totals.addCarbs(foods.get(j).getCarbs());

@@ -18,8 +18,8 @@ function Totals(){
         <h2>Totals</h2>
         <p></p>
         <table>
-        <th>ID</th>
-        <th>Food Name</th>
+        <th>Food For</th>
+        <th>Date Eaten</th>
         <th>Calories</th>
         <th>Fat</th>
         <th>Protein</th>
@@ -27,8 +27,8 @@ function Totals(){
         <th>Fiber</th>
         {foods.map(food => (
           <tr key={food.id}>
-            <td>{food.id}</td>
             <td>{food.name}</td>
+            <td>{food.date}</td>
             <td>{food.calories}</td>
             <td>{food.fat}</td>
             <td>{food.protein}</td>

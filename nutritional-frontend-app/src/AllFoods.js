@@ -27,8 +27,8 @@ function AllFoods() {
         {foods.map(food => (
           <tr key={food.id}>
             <td>{food.id}</td>
-            <td>{food.date}</td>
             <td>{food.name}</td>
+            <td>{food.date}</td>
             <td>{food.calories}</td>
             <td>{food.fat}</td>
             <td>{food.protein}</td>

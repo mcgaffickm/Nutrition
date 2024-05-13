@@ -4,7 +4,6 @@ function Totals(){
 
   //Post request to get all the food data
   const [foods, setFoods] = useState([]);
-  let removeid;
   useEffect(() => {
     fetch('http://localhost:8080/foods/totals')
       .then(response => response.json())

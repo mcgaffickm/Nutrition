@@ -27,13 +27,13 @@ function App() {
             <Link to ="/AddFood">Add a Food</Link>
           </div>
           <div class="links">
-            <Link to ="/RemoveFood">Remove a Food</Link>
+            <Link to ="/RemoveFood">Remove a Food (WIP)</Link>
           </div>
           <div class="links">
             <Link to ="/AllFoods">View All Foods</Link>
           </div>
           <div class="links">
-            <Link to ="/FoodGraph">Foods Graphs</Link>
+            <Link to ="/FoodGraph">Foods Graphs (WIP)</Link>
           </div>
           <div class="links">
             <Link to ="/Totals">Totals</Link>

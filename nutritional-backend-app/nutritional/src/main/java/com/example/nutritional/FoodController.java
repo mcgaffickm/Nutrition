@@ -112,11 +112,11 @@ public class FoodController {
        }
 
        //Medians
-       Food medians = new Food("Medians", "N/A", median(calories), median(fat), median(protein), median(carbs), median (fiber));
+       Food medians = new Food("Median", "N/A", median(calories), median(fat), median(protein), median(carbs), median (fiber));
        //Modes
        Food mode = new Food("Mode", "N/A", mode(calories), mode(fat), mode(protein), mode(carbs), mode(fiber));
        //Means
-       Food means = new Food("Means", "N/A", mean(calories), mean(fat), mean(protein), mean(carbs),mean(fiber));
+       Food means = new Food("Mean", "N/A", mean(calories), mean(fat), mean(protein), mean(carbs),mean(fiber));
 
        //Adds the stats to the food totals
        totalFood.add(medians);
@@ -158,8 +158,9 @@ public class FoodController {
                 if(count > maxCount)
                 {
                     maxCount = count;
-                    mode = val[j];
+                    mode = val[j-1];
                 }
+                count = 0;
             }
         }
         

@@ -7,9 +7,7 @@ import AddFood from './AddFood.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import FoodGraphs from './FoodGraphs.js';
 import Totals from './Totals.js';
-import RemoveFood from './RemoveFood.js';
 
 //Router to determine the different links
 function App() {
@@ -27,13 +25,7 @@ function App() {
             <Link to ="/AddFood">Add a Food</Link>
           </div>
           <div class="links">
-            <Link to ="/RemoveFood">Remove a Food (WIP)</Link>
-          </div>
-          <div class="links">
             <Link to ="/AllFoods">View All Foods</Link>
-          </div>
-          <div class="links">
-            <Link to ="/FoodGraph">Foods Graphs (WIP)</Link>
           </div>
           <div class="links">
             <Link to ="/Totals">Totals</Link>
@@ -48,8 +40,6 @@ function App() {
           <Route exact path ="/About" element={<About />}></Route>
           <Route exact path ="/AllFoods" element={<AllFoods />}></Route>
           <Route exact path ="/AddFood" element={<AddFood />}></Route>
-          <Route exact path ="/RemoveFood" element={<RemoveFood />}></Route>
-          <Route exact path ="/FoodGraph" element={<FoodGraphs />}></Route>
           <Route exact path ="/Totals" element={<Totals />}></Route>
         </Routes>
       </div>

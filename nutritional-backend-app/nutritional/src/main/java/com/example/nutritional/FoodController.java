@@ -40,6 +40,7 @@ public class FoodController {
         return foodRepository.findAll();
     }
 
+    //Gets the totals for the foods while ignoring the dates
     @GetMapping("/graphs")
     public List<Food> getTotalsForGraph() 
     {

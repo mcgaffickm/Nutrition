@@ -4,13 +4,20 @@ import './AllFoods.css'
 
 function AllFoods() {
   const [foods, setFoods] = useState([]);
-  let removeid;
   useEffect(() => {
     fetch('http://localhost:8080/foods')
       .then(response => response.json())
       .then(data => setFoods(data))
       .catch(error => console.error('Error fetching food data:', error));
   }, []);
+
+ function deleteFood(foodID)
+  {
+    fetch(`http://localhost:8080/foods/${foodID}`, {
+      method: 'DELETE',
+      mode: 'cors',
+    });
+  }
 
   return (
     <div>
@@ -34,6 +41,7 @@ function AllFoods() {
             <td>{food.protein}</td>
             <td>{food.carbs}</td>
             <td>{food.fiber}</td>
+            <td width='20px'><button  onClick={()=> deleteFood(food.id)}>Delete</button></td>
           </tr>
         ))}
       </table>

@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
+import {PieChart, Pie, Cell} from 'recharts';
+
 function FoodGraphs(){
   const [foods, setFoods] = useState([]);
+
+  
 
   //Post request to get all the food data
   useEffect(() => {
